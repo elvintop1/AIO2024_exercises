@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="899e6f6a-1eeb-4c12-903f-176cfb9ad941" name="Changes" comment="First commit">
-      <change afterPath="$PROJECT_DIR$/Module 1/Week_1_exercise_activation_function/Question_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Week_1_exercise_activation_function/Question_10.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Week_1_exercise_activation_function/Question_11.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Week_1_exercise_activation_function/Question_12.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Week_1_exercise_activation_function/Question_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Week_1_exercise_activation_function/Question_4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Week_1_exercise_activation_function/Question_5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Week_1_exercise_activation_function/Question_6.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Week_1_exercise_activation_function/Question_7.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Week_1_exercise_activation_function/Question_8.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Week_1_exercise_activation_function/Question_9.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/Week_1_exercise_activation_function/Question_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Week_1_exercise_activation_function/Question_5.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +79,7 @@
       <updated>1717256055907</updated>
       <workItem from="1717256062030" duration="144000" />
       <workItem from="1717256292319" duration="190000" />
-      <workItem from="1717256653638" duration="1027000" />
+      <workItem from="1717256653638" duration="1098000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -108,7 +97,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717257090546</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="First commit">
+      <option name="closed" value="true" />
+      <created>1717257743913</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717257743913</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
