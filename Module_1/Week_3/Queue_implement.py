@@ -1,0 +1,23 @@
+class Queue:
+    def __init__(self, capacity):
+        self.capacity = capacity
+        self.arr = []
+        
+    def is_empty(self):
+        return len(self.arr) == 0
+
+    def is_full(self):
+        return len(self.arr) == self.capacity
+
+    def enqueue(self, value):
+        assert not self.is_full(), "The list is full"
+        self.arr.append(value)
+
+    def dequeue(self):
+        assert not self.is_empty(), "The list is empty"
+        return self.arr.pop(0)
+
+    def front(self):
+        if self.is_empty():
+            raise IndexError("Front from empty queue")
+        return self.arr[0]
