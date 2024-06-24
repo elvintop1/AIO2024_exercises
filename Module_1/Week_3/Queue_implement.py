@@ -23,20 +23,3 @@ class Queue:
         if self.is_empty():
             raise IndexError("Front from empty queue")
         return self.arr[0]
-
-# Example usage
-queue1 = Queue(capacity=5)
-
-queue1.enqueue(1)
-queue1.enqueue(2)
-print(queue1.is_full())  # False
-
-print(queue1.front())  # 1
-
-print(queue1.dequeue())  # 1
-
-print(queue1.front())  # 2
-
-print(queue1.dequeue())  # 2
-
-print(queue1.is_empty())  # True

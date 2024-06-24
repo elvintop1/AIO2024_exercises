@@ -1,42 +1,21 @@
 class Stack:
-    def __init__(self, capacity):
+    def __init__(self, capacity: int):
         self.capacity = capacity
-        self.arr = []
-        
+        self.list = []
+
     def is_empty(self):
-        return len(self.arr) == 0
-
+        return len(self.list) == 0
+    
     def is_full(self):
-        return len(self.arr) == self.capacity
-
-    def push(self, value):
-        if self.is_full():
-            raise OverflowError("Stack is full")
-        self.arr.append(value)
-
-    def pop(self):
-        if self.is_empty():
-            raise IndexError("Pop from empty stack")
-        return self.arr.pop()
-
+        return len(self.list) == self.capacity
+    
+    def pops(self):
+        assert not self.is_empty(), "The list is empty"
+        self.list.pop()
+    
+    def push(self, value: int):
+        assert not self.is_full(), "The list is full"
+        self.list.append(value)
+    
     def top(self):
-        if self.is_empty():
-            raise IndexError("Top from empty stack")
-        return self.arr[-1]
-
-# Example usage
-stack1 = Stack(capacity=5)
-
-stack1.push(1)
-stack1.push(2)
-print(stack1.is_full())  # False
-
-print(stack1.top())  # 2
-
-print(stack1.pop())  # 2
-
-print(stack1.top())  # 1
-
-print(stack1.pop())  # 1
-
-print(stack1.is_empty())  # True
+        return self.list[-1] if not self.is_empty() else None
