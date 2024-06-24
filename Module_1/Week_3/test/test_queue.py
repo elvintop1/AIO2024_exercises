@@ -12,7 +12,7 @@ class TestQueue(unittest.TestCase):
         self.assertFalse(self.queue.is_full())
 
     def test_enqueue(self):
-        self.queue.list.clear()
+        self.queue.arr.clear()
         self.queue.enqueue(1)
         self.assertEqual(self.queue.front(), 1)
         self.queue.enqueue(2)
@@ -22,7 +22,7 @@ class TestQueue(unittest.TestCase):
         self.assertTrue(self.queue.is_full())
 
     def test_enqueue_overflow(self):
-        self.queue.list.clear()
+        self.queue.arr.clear()
         self.queue.enqueue(1)
         self.queue.enqueue(2)
         self.queue.enqueue(3)
@@ -31,7 +31,7 @@ class TestQueue(unittest.TestCase):
             self.assertEqual(str(context.exception), "The list is full")
 
     def test_dequeue(self):
-        self.queue.list.clear()
+        self.queue.arr.clear()
         self.queue.enqueue(1)
         self.queue.enqueue(2)
         self.queue.enqueue(3)
@@ -43,13 +43,13 @@ class TestQueue(unittest.TestCase):
         self.assertTrue(self.queue.is_empty())
 
     def test_dequeue_underflow(self):
-        self.queue.list.clear()
+        self.queue.arr.clear()
         with self.assertRaises(AssertionError) as context:
             self.queue.dequeue()
             self.assertEqual(str(context.exception), "The list is empty")
 
     def test_front(self):
-        self.queue.list.clear()
+        self.queue.arr.clear()
         self.queue.enqueue(1)
         self.assertEqual(self.queue.front(), 1)
         self.queue.enqueue(2)
@@ -58,13 +58,13 @@ class TestQueue(unittest.TestCase):
         self.assertEqual(self.queue.front(), 2)
 
     def test_is_empty(self):
-        self.queue.list.clear()
+        self.queue.arr.clear()
         self.assertTrue(self.queue.is_empty())
         self.queue.enqueue(1)
         self.assertFalse(self.queue.is_empty())
 
     def test_is_full(self):
-        self.queue.list.clear()
+        self.queue.arr.clear()
         self.queue.enqueue(1)
         self.queue.enqueue(2)
         self.assertFalse(self.queue.is_full())

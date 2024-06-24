@@ -10,13 +10,11 @@ class Queue:
         return len(self.arr) == self.capacity
 
     def enqueue(self, value):
-        if self.is_full():
-            raise OverflowError("Queue is full")
+        assert not self.is_full(), "The list is full"
         self.arr.append(value)
 
     def dequeue(self):
-        if self.is_empty():
-            raise IndexError("Dequeue from empty queue")
+        assert not self.is_empty(), "The list is empty"
         return self.arr.pop(0)
 
     def front(self):
