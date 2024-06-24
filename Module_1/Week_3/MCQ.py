@@ -96,7 +96,7 @@ class Ward:
             p.describe()
 
     def count_doctor(self):
-        return sum(1 for p in self.__listPeople if isinstance(p, Doctor))
+        return sum(1 for p in self.__list if isinstance(p, Doctor))
 
 # Example usage
 student1 = Student(name="studentA", yob=2010, grade="7")
