@@ -14,27 +14,12 @@ class MySoftmax(nn.Module):
 data = torch.Tensor([5, 2, 4])
 my_softmax = MySoftmax()
 output = my_softmax(data)
-assert round(output[-1].item(), 2) == 0.26
 print(output)
 
 # Question 4
-import torch
-import torch.nn as nn
-
-class MySoftmax(nn.Module):
-    def __init__(self):
-        super(MySoftmax, self).__init__()
-
-    def forward(self, x):
-        max_x = torch.max(x)
-        exp_x = torch.exp(x - max_x)
-        return exp_x / torch.sum(exp_x)
-
-# Example usage
 data = torch.Tensor([1, 2, 300000000])
 my_softmax = MySoftmax()
 output = my_softmax(data)
-assert round(output[0].item(), 2) == 0.0
 print(output)
 
 
@@ -56,97 +41,7 @@ class SoftmaxStable(nn.Module):
 data = torch.Tensor([1, 2, 3])
 softmax_stable = SoftmaxStable()
 output = softmax_stable(data)
-assert round(output[-1].item(), 2) == 0.67
 print(output)
-
-
-# Question 6
-from abc import ABC, abstractmethod
-
-class Person(ABC):
-    def __init__(self, name: str, yob: int):
-        self._name = name
-        self._yob = yob
-
-    def get_yob(self):
-        return self._yob
-
-    @abstractmethod
-    def describe(self):
-        pass
-
-class Student(Person):
-    def __init__(self, name: str, yob: int, grade: str):
-        super().__init__(name, yob)
-        self._grade = grade
-
-    def describe(self):
-        print(f"Student - Name: {self._name} - YoB: {self._yob} - Grade: {self._grade}")
-
-# Example usage
-student1 = Student(name="studentZ2023", yob=2011, grade="6")
-assert student1._yob == 2011
-student1.describe()
-
-
-
-# Question 7
-from abc import ABC, abstractmethod
-
-class Person(ABC):
-    def __init__(self, name: str, yob: int):
-        self._name = name
-        self._yob = yob
-
-    def get_yob(self):
-        return self._yob
-
-    @abstractmethod
-    def describe(self):
-        pass
-
-class Teacher(Person):
-    def __init__(self, name: str, yob: int, subject: str):
-        super().__init__(name, yob)
-        self._subject = subject
-
-    def describe(self):
-        print(f"Teacher - Name: {self._name} - YoB: {self._yob} - Subject: {self._subject}")
-
-# Example usage
-teacher1 = Teacher(name="teacherZ2023", yob=1991, subject="History")
-assert teacher1._yob == 1991
-teacher1.describe()
-
-
-#Question 8
-
-from abc import ABC, abstractmethod
-
-class Person(ABC):
-    def __init__(self, name: str, yob: int):
-        self._name = name
-        self._yob = yob
-
-    def get_yob(self):
-        return self._yob
-
-    @abstractmethod
-    def describe(self):
-        pass
-
-class Doctor(Person):
-    def __init__(self, name: str, yob: int, specialist: str):
-        super().__init__(name, yob)
-        self._specialist = specialist
-
-    def describe(self):
-        print(f"Doctor - Name: {self._name} - YoB: {self._yob} - Specialist: {self._specialist}")
-
-# Example usage
-doctor1 = Doctor(name="doctorZ2023", yob=1981, specialist="Endocrinologists")
-assert doctor1._yob == 1981
-doctor1.describe()
 
 #Question 9
 from abc import ABC, abstractmethod
@@ -190,14 +85,14 @@ class Doctor(Person):
 class Ward:
     def __init__(self, name: str):
         self.__name = name
-        self.__listPeople = list()
+        self.__list = list()
 
     def add_person(self, person: Person):
-        self.__listPeople.append(person)
+        self.__list.append(person)
 
     def describe(self):
         print(f"Ward Name: {self.__name}")
-        for p in self.__listPeople:
+        for p in self.__list:
             p.describe()
 
     def count_doctor(self):
@@ -219,27 +114,6 @@ ward1.add_person(doctor2)
 
 ward1.describe()
 print(f"Number of doctors: {ward1.count_doctor()}")
-
-# Question 10
-class MyStack:
-    def __init__(self, capacity):
-        self.__capacity = capacity
-        self.__stack = []
-
-    def is_full(self):
-        return len(self.__stack) == self.__capacity
-
-    def push(self, value):
-        if self.is_full():
-            raise OverflowError("Stack is full")
-        self.__stack.append(value)
-
-# Example usage
-stack1 = MyStack(capacity=5)
-stack1.push(1)
-assert stack1.is_full() == False
-stack1.push(2)
-print(stack1.is_full())  # False
 
 # Question 11
 
