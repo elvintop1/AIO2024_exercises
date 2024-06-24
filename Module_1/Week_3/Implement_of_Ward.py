@@ -1,3 +1,4 @@
+
 from abc import ABC, abstractmethod
 
 class Person(ABC):
@@ -58,3 +59,4 @@ class Ward():
         sum_of_year = sum(person.yob if isinstance(person, Teacher) else 0 for person in self.people)
         len_teacher = sum(isinstance(person, Teacher) for person in self.people)
         return float(sum_of_year / len_teacher)
+
